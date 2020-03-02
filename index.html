@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="DIV">
+        <h2> To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <button onclick="newElement()" class="addBtn">Add</button>
+        <div id="div"></div>
+      </div>
+      
+      
+      <script>
+          function newElement() {
+              var txt = document.getElementById("myInput").value;
+              var mydiv= document.getElementById("div");
+              var checkbox= document.createElement('input');
+              checkbox.type="checkbox";
+              checkbox.value="value";
+              checkbox.id="list";
+              var label=document.createElement("label");
+              label.appendChild(document.createTextNode(txt));
+            //  document.getElementById("myInput").value)
+            mydiv.appendChild(checkbox);
+            mydiv.appendChild(label);
+            mydiv.innerHTML+="<br>";
+        
+
+          }
+      </script>
+</body>
+</html>
